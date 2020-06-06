@@ -1,0 +1,14 @@
+apiVersion: apps/v1beta1
+kind: Deployment
+metadata:
+   name: apache-deployment-project
+spec:
+  replicas: 1
+  template:
+    metadata: project
+    spec:
+      containers:
+      - name: project
+        image: projectname:version
+        ports:
+        - containerPort: 80
